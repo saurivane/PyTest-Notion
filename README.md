@@ -24,7 +24,7 @@ Hay que crear primero la ***Database*** y para este ejemplo se ha dispuesto la s
 - ***Pasado:*** Según el resultado obtenido se marcará el check o no.
 - ***Resultado:*** Este campo no se transmite en la integración y se deja para que el usuario lo pueda modificar cuando se revisa la prueba en Notion.
 
-La estructura está incluida en el fichero ***notion.py*** por lo que es facilmentes modificable según las necesidades.
+La estructura está incluida en el fichero ***notion.py*** por lo que es fácilmentes modificable según las necesidades.
 
 ---
 ## 3. Utilización. 
