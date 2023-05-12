@@ -38,3 +38,7 @@ Pasos a seguir para utilizar el script:
    ```
    pytest -q --junitxml== out.xml || python notion.py
    ```
+
+[url]:https://debonair-owl-43c.notion.site/PyTest-9b4a37c58c2c45f6b3b232deb2869d5e
+Mi página de Notion con las pruebas de este scritp se encuentra en la siguiente direccion [aquí][url]
+
