@@ -27,13 +27,13 @@ Hay que crear primero la ***Database*** y para este ejemplo se ha dispuesto la s
 - ***Pasado:*** Según el resultado obtenido se marcará el check o no.
 - ***Resultado:*** Este campo no se transmite en la integración y se deja para que el usuario lo pueda modificar cuando se revisa la prueba en Notion.
 
-La estructura está incluida en el fichero ***notion.py*** por lo que es fácilmentes modificable según las necesidades.
+La estructura está incluida en el fichero ***notion.py*** por lo que es fácilmente modificable según las necesidades.
 
 ---
 ## 3. Utilización. 
 ---
 
-Pasos a seguir para utilizar el script:
+Pasos a seguir para utilizar el scritp:
 - Copiar los ficheros ***config.py***, ***notion.py*** (al ejecutar el scritp por primera vez se creará el fichero ***out.xml***)
 - Añadirlos ***.gitignore*** si fuera necesario.
 - Poner los datos de configuración el fichero ***config.py*** 
@@ -43,5 +43,5 @@ Pasos a seguir para utilizar el script:
    ```
 
 [url]:https://debonair-owl-43c.notion.site/PyTest-9b4a37c58c2c45f6b3b232deb2869d5e
-Mi página de Notion con las pruebas de este scritp se encuentra en la siguiente direccion [aquí][url]
+Mi página de Notion con las pruebas de este script se encuentra en la siguiente dirección [aquí][url]
 
