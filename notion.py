@@ -13,8 +13,13 @@ fileptr = open("out.xml","r")
 xml_content = fileptr.read() #xml_content= fileptr.read()
  
 #change xml format to ordered dict
-sin_formato=xmltodict.parse(xml_content)
-salida = json.dumps(sin_formato, indent=3)
+xml_formated=xmltodict.parse(xml_content)
+salida = json.dumps(xml_formated, indent=3)
+
+if (xml_formated["testsuites"]["testsuite"]["@errors"] == "0") and (xml_formated["testsuites"]["testsuite"]["@failures"] == "0") and (xml_formated["testsuites"]["testsuite"]["@skipped"] == "0"):
+    checkbox = True
+else:
+    checkbox = False
 
 # Variables de configuración del fichero "config.py"
 token = TOKEN
@@ -61,14 +66,18 @@ page_tags = {
                 }
             ]  
    },
-    "Date": {
+    "Fecha": {
             "type": "date",
             "date": {
                 "start": published_date,
                 "end": None,
                 "time_zone": None
             }
-        },
+    },
+    "Pasado":{
+            "type": "checkbox",
+            "checkbox": checkbox
+    }
 }
 
 children = [
