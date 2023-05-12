@@ -1,6 +1,6 @@
 import json
 from notion_client import Client
-from config import TOKEN, DATABASE_ID
+from config import TOKEN, DATABASE_ID, PROYECTO, PRUEBAS
 from datetime import datetime, timezone
 import pytz
 import xmltodict
@@ -16,26 +16,26 @@ xml_content = fileptr.read() #xml_content= fileptr.read()
 sin_formato=xmltodict.parse(xml_content)
 salida = json.dumps(sin_formato, indent=3)
 
+# Variables de configuración del fichero "config.py"
 token = TOKEN
 database_id = DATABASE_ID
-
+proyecto = PROYECTO
+pruebas = PRUEBAS
 
 notion = Client(auth=token)
-#json_object = notion.blocks.children.list(database_id)
-#json_formatted_str = json.dumps(json_object, indent=2)
 
 published_date = datetime.now().astimezone(pytz.timezone('Europe/Madrid')).isoformat()
 
 parent = {"database_id": database_id}
 
 page_tags = {
-   "Name": {
+   "Proyecto": {
             "type": "title",
             "title": [
                 {
                     "type": "text",
                     "text": {
-                        "content": "Primera prueba",
+                        "content": proyecto,
                         "link": None
                     },
                     "annotations": {
@@ -51,6 +51,16 @@ page_tags = {
                 }
             ]
         },
+   "Prueba":{
+            "type": "rich_text",
+            "rich_text": [
+                {
+                    "text": {
+                        "content" : pruebas
+                    }
+                }
+            ]  
+   },
     "Date": {
             "type": "date",
             "date": {
