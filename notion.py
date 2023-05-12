@@ -3,24 +3,26 @@ from notion_client import Client
 from config import TOKEN, DATABASE_ID
 from datetime import datetime, timezone
 import pytz
+import xmltodict
 
-#f = open("out.txt", "r")
-#salida = str(f.read())
-#f.close()
-#print(salida)
 
-salida = "Hello World"
-
-f = open("out.xml", "r")
-salida = str(f.read())
-f.close()
+#open the file
+fileptr = open("out.xml","r")
+ 
+#read xml content from the file
+xml_content = fileptr.read() #xml_content= fileptr.read()
+ 
+#change xml format to ordered dict
+sin_formato=xmltodict.parse(xml_content)
+salida = json.dumps(sin_formato, indent=3)
 
 token = TOKEN
 database_id = DATABASE_ID
 
+
 notion = Client(auth=token)
-json_object = notion.blocks.children.list(database_id)
-json_formatted_str = json.dumps(json_object, indent=2)
+#json_object = notion.blocks.children.list(database_id)
+#json_formatted_str = json.dumps(json_object, indent=2)
 
 published_date = datetime.now().astimezone(pytz.timezone('Europe/Madrid')).isoformat()
 
@@ -77,14 +79,14 @@ children = [
                   "italic": False,
                   "strikethrough": False,
                   "underline": False,
-                  "code": False,
+                  "code": True,
                   "color": "default"
                 },
                 "plain_text": salida, #"============================= test session starts =============================\nplatform win32 -- Python 3.11.3, pytest-7.3.1, pluggy-1.0.0\nrootdir: C:\\Users\\sauri\\Documents\\Proyectos\\python\\PyTest-Notion\nplugins: anyio-3.6.2, notion-1.0.1\ncollected 1 item\ntest_main.py .\n============================== 1 passed in 0.01s ==============================",
                 "href": None
               }
             ],
-            "language": "xml"
+            "language": "json"
         },
     },
 ]

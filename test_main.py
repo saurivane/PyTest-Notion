@@ -1,4 +1,5 @@
 import pytest
+
 from prueba import suma
 
 class TestSuma:
