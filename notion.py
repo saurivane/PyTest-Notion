@@ -65,7 +65,7 @@ page_tags = {
                     }
                 }
             ]  
-   },
+        },
     "Fecha": {
             "type": "date",
             "date": {

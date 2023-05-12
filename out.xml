@@ -1,1 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.025" timestamp="2023-05-12T17:27:06.315245" hostname="DESKTOP-DC1VECC"><testcase classname="test_main.TestSuma" name="test_suma_bien" time="0.001" /></testsuite></testsuites>
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.121" timestamp="2023-05-12T18:33:04.289931" hostname="DESKTOP-DC1VECC"><testcase classname="test_prueba.TestSuma" name="test_suma_bien" time="0.001"><failure message="assert 6 == 5">self = &lt;test_prueba.TestSuma object at 0x0000028CD4591B50&gt;
+
+    def test_suma_bien(self):
+&gt;       assert 6 == 5
+E       assert 6 == 5
+
+test_prueba.py:7: AssertionError</failure></testcase></testsuite></testsuites>
