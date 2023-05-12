@@ -6,6 +6,9 @@
 
 Script para automatizar la salida de test con ***PyTest*** y llevar el resultado a una database en ***Notion***.
 
+[notion-client]:https://pypi.org/project/notion-client/
+El script utiliza la librería [notion_client][notion-client] para la conexión con ***Notion***.
+
 En el fichero ***config.py*** se pueden introducir las siguientes configuraciones:
 
 - ***TOKEN*** = Token de la API de Notion.
@@ -31,7 +34,7 @@ La estructura está incluida en el fichero ***notion.py*** por lo que es fácilm
 ---
 
 Pasos a seguir para utilizar el script:
-- Copiar los ficheros ***config.py***, ***notion.py***
+- Copiar los ficheros ***config.py***, ***notion.py*** (al ejecutar el scritp por primera vez se creará el fichero ***out.xml***)
 - Añadirlos ***.gitignore*** si fuera necesario.
 - Poner los datos de configuración el fichero ***config.py*** 
 - Realizar las prueba con ***PyTest*** con las siguientes opciones (pueden añadirse más según requiera el usuario):
