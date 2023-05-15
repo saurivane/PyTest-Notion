@@ -90,7 +90,7 @@ children = [
               {
                 "type": "text",
                 "text": {
-                  "content": salida, #"============================= test session starts =============================\nplatform win32 -- Python 3.11.3, pytest-7.3.1, pluggy-1.0.0\nrootdir: C:\\Users\\sauri\\Documents\\Proyectos\\python\\PyTest-Notion\nplugins: anyio-3.6.2, notion-1.0.1\ncollected 1 item\ntest_main.py .\n============================== 1 passed in 0.01s ==============================",
+                  "content": salida,
                   "link": None
                 },
                 "annotations": {
@@ -101,7 +101,7 @@ children = [
                   "code": True,
                   "color": "default"
                 },
-                "plain_text": salida, #"============================= test session starts =============================\nplatform win32 -- Python 3.11.3, pytest-7.3.1, pluggy-1.0.0\nrootdir: C:\\Users\\sauri\\Documents\\Proyectos\\python\\PyTest-Notion\nplugins: anyio-3.6.2, notion-1.0.1\ncollected 1 item\ntest_main.py .\n============================== 1 passed in 0.01s ==============================",
+                "plain_text": salida,
                 "href": None
               }
             ],
